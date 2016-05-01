@@ -985,7 +985,7 @@ def check_folders():
             os.makedirs(folder)
 
 def check_files():
-    default = {"VOLUME" : 0.5, "MAX_LENGTH" : 3700, "QUEUE_MODE" : True, "MAX_CACHE" : 0, "SOUNDCLOUD_CLIENT_ID": None, "TITLE_STATUS" : True, "SERVER_SFX_ON" : {}, "VOTE_PERC" : 50, "AVCONV" : False}
+    default = {"VOLUME" : 0.5, "MAX_LENGTH" : 3700, "QUEUE_MODE" : True, "MAX_CACHE" : 0, "SOUNDCLOUD_CLIENT_ID": None, "TITLE_STATUS" : True, "AVCONV" : False, "SERVER_SFX_ON" : {}, "VOTE_PERC" : 50}
     settings_path = "data/audio/settings.json"
 
     if not os.path.isfile(settings_path):
