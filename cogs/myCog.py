@@ -16,12 +16,13 @@ class Mycog:
         self.bot = bot
         #self.player_names = fileIO("data/namess/log.json", "load")
 
+        #I mean. This is annoying but it works. for starters.
     @commands.command()
     async def mycom(self, fname: str, lname: str, lv: str):
         """This does stuff!"""
         doge = fname + " " + lname + " " + lv
         #Your code will go here
-        await self.bot.say("Your information will be recorded as: " + doge)
+        await self.bot.say("Your information will be recorded as: " + "`" + doge + "`")
         #fileIO("data/namess/log.json", "save", doge)
 
 def setup(bot):
