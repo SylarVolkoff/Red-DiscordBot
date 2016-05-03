@@ -19,7 +19,7 @@ class Mycog:
     async def mycom(self, cat: str):
         """This does stuff"""
 
-        print(cat)
+        print("--x--")
 
     def setup(bot):
         bot.add_cog(Mycog(bot))
