@@ -8,11 +8,11 @@ class Mycog:
         self.bot = bot
 
     @commands.command()
-    async def mycom(self):
+    async def mycom(self, cat: str):
         """This does stuff!"""
 
         #Your code will go here
-        await self.bot.say("I can do stuff!")
+        await self.bot.say("I can do stuff! " + cat)
 
 def setup(bot):
     bot.add_cog(Mycog(bot))
