@@ -1,25 +1,18 @@
 import discord
 from discord.ext import commands
-from .utils.dataIO import fileIO
-from .utils import checks
-import os
-import time
-import aiohttp
-import asyncio
-from copy import deepcopy
-import logging
 
 class Mycog:
-    """My custom cog that does shit"""
+    """My custom cog that does stuff!"""
 
     def __init__(self, bot):
         self.bot = bot
 
     @commands.command()
-    async def mycom(self, cat: str):
-        """This does stuff"""
+    async def mycom(self):
+        """This does stuff!"""
 
-        print("--x--")
+        #Your code will go here
+        await self.bot.say("I can do stuff!")
 
-    def setup(bot):
-        bot.add_cog(Mycog(bot))
+def setup(bot):
+    bot.add_cog(Mycog(bot))
