@@ -23,10 +23,6 @@ class Mycog:
         doge = fname + " " + lname + " " + lv
         #Your code will go here
         await self.bot.say("Your information will be recorded as: " + "`" + doge + "`")
-
-        self.player_names.append(
-            doge
-        )
         fileIO("data/namess/log.json", "save", self.player_names)
 
 def setup(bot):
