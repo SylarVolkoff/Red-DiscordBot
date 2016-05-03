@@ -1,5 +1,13 @@
 import discord
 from discord.ext import commands
+from .utils.dataIO import fileIO
+from .utils import checks
+import os
+import time
+import aiohttp
+import asyncio
+from copy import deepcopy
+import logging
 
 class Mycog:
     """My custom cog that does shit"""
