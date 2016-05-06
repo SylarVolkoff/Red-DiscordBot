@@ -14,7 +14,7 @@ class Mycog:
 
     def __init__(self, bot):
         self.bot = bot
-        self.player_data = fileIO("data/log.json", "load")
+        #self.player_data = fileIO("data/log.json", "load")
 
         #I mean. This is annoying but it works. for starters.
     @commands.command()
@@ -23,7 +23,8 @@ class Mycog:
         doge = fname + " " + lname + " " + lv
         #Your code will go here
         await self.bot.say("Your information will be recorded as: " + "`" + doge + "`")
-        #fileIO("data/log.json", "save", self.player_data)
+        #cate = {fname + lname + lv}
+        #fileIO("data/log.json", "save", cate)
 
 def setup(bot):
     bot.add_cog(Mycog(bot))
