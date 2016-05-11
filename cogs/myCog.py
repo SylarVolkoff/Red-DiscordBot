@@ -18,9 +18,9 @@ class Mycog:
 
         #I mean. This is annoying but it works. for starters.
     @commands.command()
-    async def mycom(self, ctx, fname: str, lname: str, lv: str):
+    async def mycom(self, fname: str, lname: str, lv: str):
         """This does stuff!"""
-        user = ctx.message.author
+        user = self.message.author
         doge = fname + " " + lname + " " + lv
         #Your code will go here
 
