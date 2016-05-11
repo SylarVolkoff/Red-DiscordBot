@@ -14,17 +14,21 @@ class Mycog:
 
     def __init__(self, bot):
         self.bot = bot
-        #self.player_data = fileIO("data/log.json", "load")
+        self.player_data = fileIO("data/log.json", "load")
 
         #I mean. This is annoying but it works. for starters.
     @commands.command()
-    async def mycom(self, fname: str, lname: str, lv: str):
+    async def mycom(self, ctx, fname: str, lname: str, lv: str):
         """This does stuff!"""
+        user = ctx.message.author
         doge = fname + " " + lname + " " + lv
         #Your code will go here
         await self.bot.say("Your information will be recorded as: " + "`" + doge + "`")
-        #cate = {fname + lname + lv}
-        #fileIO("data/log.json", "save", cate)
+        if user.id not in self.player_data:
+            self.player_data[user.id] = {"pKey" : user.id, "name" : user.name,"cat" : doge}
+            fileIO("data/log.json", "save", self.player_data)
+        else:
+            await self.bot.say("You gucci")
 
 def setup(bot):
     bot.add_cog(Mycog(bot))
