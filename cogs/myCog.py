@@ -18,14 +18,14 @@ class Mycog:
 
         #I mean. This is annoying but it works. for starters.
     @commands.command()
-    async def mycom(self, fname: str, lname: str, lv: str):
+    async def mycom(self, ctx, fname: str, lname: str, lv: str):
         """This does stuff!"""
-        user = self.message.author
+        user = ctx.message.author
         doge = fname + " " + lname + " " + lv
         #Your code will go here
 
         if user.id not in self.player_data:
-            self.player_data[user.id] = {"pKey" : user.id, "name" : user.name,"cat" : doge}
+            self.player_data[user.id] = {"name" : user.name,"cat" : doge}
             fileIO("data/log.json", "save", self.player_data)
         else:
             await self.bot.say("You gucci")
