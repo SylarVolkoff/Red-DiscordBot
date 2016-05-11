@@ -23,12 +23,14 @@ class Mycog:
         user = ctx.message.author
         doge = fname + " " + lname + " " + lv
         #Your code will go here
-        await self.bot.say("Your information will be recorded as: " + "`" + doge + "`")
+
         if user.id not in self.player_data:
             self.player_data[user.id] = {"pKey" : user.id, "name" : user.name,"cat" : doge}
             fileIO("data/log.json", "save", self.player_data)
         else:
             await self.bot.say("You gucci")
+
+        await self.bot.say("Your information will be recorded as: " + "`" + doge + "`")
 
 def setup(bot):
     bot.add_cog(Mycog(bot))
